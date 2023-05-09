@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+    <broker topic="sms.notification.sender" exchange="magento-db" type="db">
+        <queue name="sms.notification.sender.queue"
+               consumer="sms.notification.sender.processor"
+               consumerInstance="Magento\Framework\MessageQueue\Consumer"
+               handler="CodeLands\MobileLogin\Model\Sms\Queue\Consumer::process"
+        />
+    </broker>
+</config>

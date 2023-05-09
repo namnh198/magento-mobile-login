@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sms_notification_log" resource="default" engine="innodb" comment="SMS Notification Logs">
+        <column xsi:type="int" name="id" padding="11" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="text" name="sms_content" nullable="true" comment="SMS Content"/>
+        <column xsi:type="varchar" name="sms_template" length="255" nullable="true" comment="SMS Template"/>
+        <column xsi:type="smallint" name="status" padding="5" nullable="true" comment="Status"/>
+        <column xsi:type="smallint" name="store_id" padding="6" unsigned="true" nullable="true" identity="false" comment="Store Id"/>
+        <column xsi:type="varchar" name="recipient" length="255" nullable="true" comment="Recipient"/>
+        <column xsi:type="text" name="error_message" nullable="true" comment="Error Message"/>
+        <column xsi:type="timestamp" name="created_at" default="CURRENT_TIMESTAMP" nullable="false" comment="Created at"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

@@ -1,0 +1,25 @@
+{
+  "name": "code-lands/magento-mobile-login",
+  "version": "1.0.0",
+  "description": "N/A",
+  "type": "magento2-module",
+  "require": {
+    "intergo/sms.to-php": "^1.1",
+    "magento/framework": "*",
+    "magento/module-checkout": "100.4.*",
+    "magento/module-customer": "103.0.*",
+    "magento/module-email": "101.1.*",
+    "twilio/sdk": "^7.3"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "CodeLands\\Test\\": ""
+    }
+  }
+}

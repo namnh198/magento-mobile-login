@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="CodeLands_MobileLogin::sms_notification" title="Sms Notification" module="CodeLands_MobileLogin" sortOrder="45" resource="CodeLands_MobileLogin::sms_notification" parent="Magento_Backend::stores"/>
+        <add id="CodeLands_MobileLogin::sms_log" title="Sms Logs" module="CodeLands_MobileLogin" sortOrder="10" parent="CodeLands_MobileLogin::sms_notification" action="adminhtml/smsLog/" resource="CodeLands_MobileLogin::sms_log"/>
+        <add id="CodeLands_MobileLogin::configuration" title="Configuration" module="CodeLands_MobileLogin" sortOrder="100" action="adminhtml/system_config/edit/section/sms_notification/" resource="CodeLands_MobileLogin::configuration" parent="CodeLands_MobileLogin::sms_notification"/>
+    </menu>
+</config>

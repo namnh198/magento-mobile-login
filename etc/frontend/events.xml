@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="send_sms_place_order_new" instance="CodeLands\MobileLogin\Observer\SendSmsPlaceOrder" />
+    </event>
+
+    <event name="controller_action_predispatch_customer_account_loginPost">
+        <observer name="mobile_login_authentication_before_login" instance="CodeLands\MobileLogin\Observer\AuthenticateMobileNumber" />
+    </event>
+    <event name="controller_action_predispatch_customer_ajax_login">
+        <observer name="mobile_login_authentication_before_ajax_login" instance="CodeLands\MobileLogin\Observer\AuthenticateMobileNumber" />
+    </event>
+    <event name="controller_action_predispatch_customer_account_createPost">
+        <observer name="mobile_login_authentication_before_create" instance="CodeLands\MobileLogin\Observer\RegisterMobileNumber" />
+    </event>
+    <event name="customer_customer_authenticated">
+        <observer name="redirect_to_sms_verify" instance="CodeLands\MobileLogin\Observer\RedirectToSmsVerify" />
+    </event>
+    <event name="customer_register_success">
+        <observer name="redirect_to_sms_verify" instance="CodeLands\MobileLogin\Observer\SendSmdAndRedirectVerify" />
+    </event>
+</config>

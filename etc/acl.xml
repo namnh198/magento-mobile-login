@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="CodeLands_MobileLogin::sms_notification" title="Sms Notification" translate="title" sortOrder="45">
+                    <resource id="CodeLands_MobileLogin::sms_log" title="Sms Log" translate="title" sortOrder="10"/>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="CodeLands_MobileLogin::config_mobile_login" title="Mobile Login Section" translate="title" sortOrder="499" />
+                            <resource id="CodeLands_MobileLogin::config_sms_manager" title="SMS Manager Section" translate="title" sortOrder="500" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

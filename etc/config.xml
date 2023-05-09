@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mobile_login>
+            <general>
+                <enable>0</enable>
+                <login_mode>1</login_mode>
+                <enable_confirmed>1</enable_confirmed>
+                <email_required>0</email_required>
+                <otp_length>6</otp_length>
+            </general>
+        </mobile_login>
+        <sms_notification>
+            <general>
+                <async_all>0</async_all>
+                <log_sms>1</log_sms>
+                <develop>0</develop>
+            </general>
+            <sms_template>
+                <order_success>Thank you for placing your order. You can check the details here {{customerUrl}}</order_success>
+                <verify_account>Your verification code is: {{otp_code}}</verify_account>
+                <password_reset>Please, click on this link to create a new password: {{resetUrl}}</password_reset>
+            </sms_template>
+        </sms_notification>
+    </default>
+</config>
